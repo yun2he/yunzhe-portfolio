@@ -6,4 +6,14 @@ export default defineConfig({
   css: {
     postcss: './postcss.config.js',
   },
+  base: './', // Use relative paths for GitHub Pages
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined, // Disable code splitting for better compatibility
+      }
+    }
+  }
 })
